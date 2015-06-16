@@ -1,2 +1,2 @@
 # NbC2Asm
-Generate an assembler (asm) file from a c file.
+Generate an assembler (asm) file from a c/c++ file.
