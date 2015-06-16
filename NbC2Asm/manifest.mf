@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+AutoUpdate-Show-In-Client: true
+OpenIDE-Module: org.chrisle.netbeans.plugins.nbc2asm
+OpenIDE-Module-Localizing-Bundle: org/chrisle/netbeans/plugins/nbc2asm/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+
