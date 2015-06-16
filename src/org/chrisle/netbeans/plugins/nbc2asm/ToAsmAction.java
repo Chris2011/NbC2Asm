@@ -25,7 +25,7 @@ import org.openide.util.NbBundle.Messages;
     @ActionReference(path = "Editors/text/x-c/Popup", position = 550),
     @ActionReference(path = "Editors/text/x-c++/Popup", position = 550),
 })
-@Messages("CTL_ToAsmAction=Compile file to asm")
+@Messages("CTL_ToAsmAction=Compile File to asm")
 public final class ToAsmAction implements ActionListener {
 
     private final DataObject _context;
