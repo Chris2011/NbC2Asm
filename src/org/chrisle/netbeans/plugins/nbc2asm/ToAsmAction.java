@@ -20,8 +20,8 @@ import org.openide.util.NbBundle.Messages;
         displayName = "#CTL_ToAsmAction"
 )
 @ActionReferences({
-    @ActionReference(path = "Loaders/text/x-c/Actions", position = 900),
-    @ActionReference(path = "Loaders/text/x-c++/Actions", position = 900),
+    @ActionReference(path = "Loaders/text/x-c/Actions", position = 150),
+    @ActionReference(path = "Loaders/text/x-c++/Actions", position = 150),
     @ActionReference(path = "Editors/text/x-c/Popup", position = 550),
     @ActionReference(path = "Editors/text/x-c++/Popup", position = 550),
 })
@@ -42,8 +42,8 @@ public final class ToAsmAction implements ActionListener {
         String fileWithExt = file.getNameExt();
         String fileWithPath = FileUtil.toFile(file).getAbsolutePath();
         String folder = fileWithPath.substring(0, fileWithPath.lastIndexOf(File.separator));
-        String outputFile = folder + "\\" + fileName + ".asm";
+        String outputFile = String.format("{0}\\{1}.asm", folder, fileName);
 
-        CommandUtils.exec("Compile " + fileWithExt + " to " + fileName + ".asm", fileWithPath, outputFile);
+        CommandUtils.exec(String.format("Compile {0} to {1}.asm", fileWithExt, fileName), fileWithPath, outputFile);
     }
 }
